@@ -7,7 +7,7 @@ $_SESSION['nombre']++;
 }
 echo $_SESSION['nombre'];
 ?>
-<h1>marche po</h1>
+<h1>marche pas</h1>
 <form method="GET" action="?plus">
 <input type="submit" value="J'incrémente !">
 </form>
