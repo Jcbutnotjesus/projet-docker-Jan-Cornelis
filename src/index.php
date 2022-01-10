@@ -1,7 +1,12 @@
 <?php
-echo 'Hello from <a href="https://jrcan.dev.netlib.re/">JrCanDev</a> <br>';
-echo '<img src="https://www.docker.com/sites/default/files/horizontal.png">';
-echo '<p>update : 2 déc. 2021 à 16h31 </p>';
-phpinfo();
+session_start();
+$_SESSION['nombre'] = 0;
+if(isset($_GET['plus']))
+{
+$_SESSION['nombre']++;
+}
+echo $_SESSION['nombre'];
 ?>
-
+<form method="GET" action="?plus">
+<input type="submit" value="J'incrémente !">
+</form>
